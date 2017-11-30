@@ -9,14 +9,14 @@ Host *
 	Compression yes
 
 Host bwh
-    HostName 172.96.215.73
+    HostName 
     User root
-    Port 27850
+    Port 
     IdentityFile ~/.ssh/id_rsa
 
 Host pi
-    HostName 172.23.237.55
+    HostName 
     User pi
-    Port 22
+    Port 
     IdentityFile ~/.ssh/id_rsa
 

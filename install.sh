@@ -31,11 +31,11 @@ else
     echo “You have installed gsed”
 fi
 
-if [[ ! -e /usr/local/bin/cmake ]]; then
-    brew install cmake
-else
-    echo "You have installed cmake"
-fi
+# if [[ ! -e /usr/local/bin/cmake ]]; then
+#     brew install cmake
+# else
+#     echo "You have installed cmake"
+# fi
 
 if [[ ! -e /usr/local/bin/autojump ]]; then
     brew install autojump
@@ -66,14 +66,14 @@ else
 fi
 
 # install MacVim
-if [[ ! -e /usr/local/bin/gvim ]]; then
-    unzip software/MacVim.zip
-    mv MacVim.app /Applications/MacVim.app
-    ln -s /Applications/MacVim.app/Contents/bin/gvim /usr/local/bin/gvim
-    rm -rf __MACOSX
-else
-    echo "You have installed macvim”"
-fi
+# if [[ ! -e /usr/local/bin/gvim ]]; then
+#     unzip software/MacVim.zip
+#     mv MacVim.app /Applications/MacVim.app
+#     ln -s /Applications/MacVim.app/Contents/bin/gvim /usr/local/bin/gvim
+#     rm -rf __MACOSX
+# else
+#     echo "You have installed macvim”"
+# fi
 
 # install coreutils
 if [[ ! -e /usr/local/opt/coreutils ]]; then
@@ -89,8 +89,9 @@ brew_install ssh-copy-id
 brew_install imagemagick
 brew_install catimg
 
+time_stamp=$(date +%Y-%m-%d-%T)
 # link git config
-mv ~/.gitconfig ~/.gitconfig_backup
+mv ~/.gitconfig ~/".gitconfig_backup_${time_stamp}"
 ln -s ~/.macbootstrap/git-config/.gitconfig ~/.gitconfig
 
 if [[ ! -e ~/.oh-my-zsh ]]; then
@@ -98,19 +99,19 @@ if [[ ! -e ~/.oh-my-zsh ]]; then
 fi
 
 # link zshrc
-mv ~/.zshrc ~/.zshrc_backup
+mv ~/.zshrc ~/".zshrc_backup_${time_stamp}"
 ln -s ~/.macbootstrap/zsh-config/.zshrc ~/.zshrc
 
 # vim configuration
 git clone https://github.com/bestswifter/.vim.git --recursive ~/.vim
 if [[ -e ~/.vimrc ]]; then
-    mv ~/.vimrc ~/.vimrc_backup
+    mv ~/.vimrc ~/".vimrc_backup_${time_stamp}"
 fi
 ln -s ~/.vim/.vimrc ~/.vimrc
 
 # ssh configuration
 if [[ -e ~/.ssh/config ]]; then
-    mv ~/.ssh/config ~/.ssh/config_backup
+    mv ~/.ssh/config ~/.ssh/"config_backup_${time_stamp}"
 fi
 ln -s ~/.macbootstrap/zsh-config/ssh_config ~/.ssh/config
 

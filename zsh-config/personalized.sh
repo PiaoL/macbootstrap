@@ -10,7 +10,7 @@ function y () {
         brew install youtube-dl
     fi
 
-    youtube-dl -q --proxy socks5://127.0.0.1:14179/ --console-title $1 -f 'best' -o '~/Movies/Youtube/%(title)s.%(ext)s' &
+    youtube-dl -q --proxy socks5://127.0.0.1:1086/ --console-title $1 -f 'best' -o '~/Movies/Youtube/%(title)s.%(ext)s' &
 }
 
 # Make ctags in current directory
@@ -27,4 +27,24 @@ function objctags() {
     --regex-objc='/^[[:space:]]*\@interface[[:space:]]+(.*)[[:space:]]+:.*{/\1/i,interface/' -R .&> /dev/null
 }
 
+
+
+export HOMEBREW_NO_AUTO_UPDATE=true
+source ~/.bash_profile
+
+# Add RVM to PATH for scripting
+export PATH="$PATH:$HOME/.rvm/bin" 
+# Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
+
+# Virtualenv/VirtualenvWrapper
+source /usr/local/bin/virtualenvwrapper.sh
+
+alias m='mkdir'
 alias pi='pod install'
+alias dl='youtube-dl --no-check-certificate --proxy 127.0.0.1:8087'
+alias subl="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
+alias zshconfig="subl ~/.macbootstrap/zsh-config/personalized.sh"
+
+
+

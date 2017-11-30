@@ -1,4 +1,7 @@
+#  前言
+Folk 自 bestswift， 做了一些小的修改
 #  介绍
+
 
 这是一个快速创建开发环境的脚本，里面集成了一些常用的配置。本脚本主要针对新电脑开发，如果你的电脑没有做过命令行方面的配置或者不怕丢失这些配置也可以使用。虽然我在安装过程中考虑到了旧数据的备份，但并不保证 100% 有效。
 
@@ -7,7 +10,7 @@
 你的电脑不需要任何配置，只需要执行以下代码即可：
 
 ```shell
-curl https://raw.githubusercontent.com/bestswifter/macbootstrap/master/bootstrap.sh | sh
+curl https://raw.githubusercontent.com/PiaoL/macbootstrap/master/bootstrap.sh | sh
 ```
 
 `bootstrap.sh` 文件首先会安装 Xcode-command tool，安装完成后你的电脑将会拥有 git 工具。
