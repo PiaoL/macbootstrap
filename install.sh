@@ -91,8 +91,8 @@ brew_install catimg
 
 time_stamp=$(date +%Y-%m-%d-%T)
 # link git config
-mv ~/.gitconfig ~/".gitconfig_backup_${time_stamp}"
-ln -s ~/.macbootstrap/git-config/.gitconfig ~/.gitconfig
+# mv ~/.gitconfig ~/".gitconfig_backup_${time_stamp}"
+# ln -s ~/.macbootstrap/git-config/.gitconfig ~/.gitconfig
 
 if [[ ! -e ~/.oh-my-zsh ]]; then
     curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh

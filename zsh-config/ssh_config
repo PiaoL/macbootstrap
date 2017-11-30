@@ -8,15 +8,10 @@ Host *
 	ControlPersist 4h
 	Compression yes
 
-Host bwh
-    HostName 
+Host gce
+    HostName doubigg.me
     User root
-    Port 
+    Port 22
     IdentityFile ~/.ssh/id_rsa
 
-Host pi
-    HostName 
-    User pi
-    Port 
-    IdentityFile ~/.ssh/id_rsa
 
