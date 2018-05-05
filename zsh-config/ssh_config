@@ -7,16 +7,3 @@ Host *
 	ControlPath ~/.ssh/%h-%p-%r
 	ControlPersist 4h
 	Compression yes
-
-Host bwh
-    HostName 
-    User root
-    Port 
-    IdentityFile ~/.ssh/id_rsa
-
-Host pi
-    HostName 
-    User pi
-    Port 
-    IdentityFile ~/.ssh/id_rsa
-

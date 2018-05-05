@@ -1,6 +1,6 @@
 [user]
-    name = bestswifter
-    email = ktzhang@bestswifter.com
+    name = piao
+    email = 653957765@qq.com
 [color]
     diff = auto
     status = auto
@@ -43,3 +43,5 @@
     default = current
 [grep]
     lineNumber = true
+[http]
+	sslVerify = true
