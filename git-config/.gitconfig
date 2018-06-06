@@ -1,6 +1,6 @@
 [user]
-    name = PiaoL
-    email = gailungg@gmail.com
+	name = piaoL
+    email = 653957765@qq.com
 [color]
     diff = auto
     status = auto
@@ -43,3 +43,8 @@
     default = current
 [grep]
     lineNumber = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

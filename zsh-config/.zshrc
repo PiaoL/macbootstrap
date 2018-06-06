@@ -28,3 +28,7 @@ source $(brew --prefix)/etc/profile.d/autojump.sh
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH:$M2_HOME/bin
+export GOPATH=/Users/piao/go
+export PATH=/usr/local/opt/coreutils/libexec/gnubin:/opt/iOSOpenDev/bin:/opt/local/bin:/usr/local/bin:/Users/piao/.rvm/gems/ruby-2.2.0/bin:/Users/piao/.rvm/gems/ruby-2.2.0@global/bin:/Users/piao/.rvm/rubies/ruby-2.2.0/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Users/piao/.rvm/bin:/Users/piao/Library/Android/sdk/tools:/Users/piao/Library/Android/sdk/platform-tools:/Users/piao/.rvm/bin:/bin:/Users/piao/go/bin:/usr/local/go/bin
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
