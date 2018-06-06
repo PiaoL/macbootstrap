@@ -30,9 +30,15 @@ function ow() {
     if [[ -n "$@" ]]; then
         (cd "$@" && ow)
     else
+<<<<<<< HEAD
+        if ls *.xcodeproj 2>&1 1>/dev/null; then
+            for i in *.xcworkspace;open "$i"
+        elif ls *.xcworkspace 2>&1 1>/dev/null; then
+=======
         if ls *.xcworkspace 2>&1 1>/dev/null; then
             for i in *.xcworkspace;open "$i"
         elif ls *.xcodeproj 2>&1 1>/dev/null; then
+>>>>>>> 42c0afe00172e7bf9d7551239118953c836979e9
             for i in *.xcodeproj;open "$i"
         else
             echo "ERROR, xcode project not exists in '$(pwd)' !"

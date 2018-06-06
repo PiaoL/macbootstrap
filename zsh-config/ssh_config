@@ -7,6 +7,8 @@ Host *
 	ControlPath ~/.ssh/%h-%p-%r
 	ControlPersist 4h
 	Compression yes
+<<<<<<< HEAD
+=======
 
 Host gce
     HostName doubigg.me
@@ -15,3 +17,4 @@ Host gce
     IdentityFile ~/.ssh/id_rsa
 
 
+>>>>>>> 42c0afe00172e7bf9d7551239118953c836979e9
