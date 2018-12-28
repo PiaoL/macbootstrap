@@ -30,9 +30,9 @@ function ow() {
     if [[ -n "$@" ]]; then
         (cd "$@" && ow)
     else
-        if ls *.xcodeproj 2>&1 1>/dev/null; then
+        if ls *.xcworkspace 2>&1 1>/dev/null; then
             for i in *.xcworkspace;open "$i"
-        elif ls *.xcworkspace 2>&1 1>/dev/null; then
+        elif ls *.xcodeproj 2>&1 1>/dev/null; then
             for i in *.xcodeproj;open "$i"
         else
             echo "ERROR, xcode project not exists in '$(pwd)' !"
@@ -60,10 +60,10 @@ function h(){
 }
 
 function pt() {
-    launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.polipo.plist
-    launchctl load ~/Library/LaunchAgents/homebrew.mxcl.polipo.plist
-    export http_proxy=http://localhost:8123
-    export https_proxy=http://localhost:8123
+    launchctl unload ~/Library/LaunchAgents/com.qiuyuzhou.shadowsocksX-NG.http.plist
+    launchctl load ~/Library/LaunchAgents/com.qiuyuzhou.shadowsocksX-NG.http.plist
+    export http_proxy=http://localhost:1086
+    export https_proxy=http://localhost:1086
 }
 
 function s() {
@@ -102,6 +102,12 @@ mkcdir () {
     mkdir -p -- "$1" &&
     cd -P -- "$1"
 }
+
+#move iOS device support file to xcode
+mvds () {
+    mv "$1"  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/DeviceSupport
+}
+
 
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder'

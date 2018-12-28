@@ -9,8 +9,7 @@ function y () {
     if [[ ! -e /usr/local/bin/youtube-dl  ]]; then
         brew install youtube-dl
     fi
-
-    youtube-dl -q --proxy socks5://127.0.0.1:1086/ --console-title $1 -f 'best' -o '~/Movies/Youtube/%(title)s.%(ext)s' &
+    youtube-dl -q --proxy socks5://127.0.0.1:1086/ --console-title $1 -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4 -o '~/Movies/Youtube/%(title)s.%(ext)s' &
 }
 
 # Make ctags in current directory
@@ -30,7 +29,7 @@ function objctags() {
 
 
 export HOMEBREW_NO_AUTO_UPDATE=true
-source ~/.bash_profile
+# source ~/.bash_profile
 
 # Add RVM to PATH for scripting
 export PATH="$PATH:$HOME/.rvm/bin" 
@@ -38,7 +37,7 @@ export PATH="$PATH:$HOME/.rvm/bin"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
 
 # Virtualenv/VirtualenvWrapper
-source /usr/local/bin/virtualenvwrapper.sh
+# source /usr/local/bin/virtualenvwrapper.sh
 
 alias m='mkdir'
 alias pi='pod install'
@@ -48,5 +47,7 @@ alias zshconfig="subl ~/.macbootstrap/zsh-config/personalized.sh"
 alias rnb="react-native bundle --platform ios --entry-file index.js --bundle-output ios/bundle/main.jsbundle --assets-dest ios/bundle --dev false
 "
 alias codep="code-push"
+alias cdmj='cd ~/MyProject/majia/wmguan'
+
 
 
