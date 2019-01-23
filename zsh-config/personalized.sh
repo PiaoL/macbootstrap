@@ -5,7 +5,7 @@ function bsfn () {
 }
 
 # Download youtube video to ~/Movies/Youtube
-function y () {
+function ydl () {
     if [[ ! -e /usr/local/bin/youtube-dl  ]]; then
         brew install youtube-dl
     fi
@@ -41,7 +41,6 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 alias m='mkdir'
 alias pi='pod install'
-alias dl='youtube-dl --no-check-certificate --proxy 127.0.0.1:8087'
 alias subl="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
 alias zshconfig="subl ~/.macbootstrap/zsh-config/personalized.sh"
 alias rnb="react-native bundle --platform ios --entry-file index.js --bundle-output ios/bundle/main.jsbundle --assets-dest ios/bundle --dev false
