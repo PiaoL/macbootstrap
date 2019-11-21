@@ -5,7 +5,7 @@ function bsfn () {
 }
 
 # Download youtube video to ~/Movies/Youtube
-function ydl () {
+function yd () {
     if [[ ! -e /usr/local/bin/youtube-dl  ]]; then
         brew install youtube-dl
     fi
@@ -26,7 +26,9 @@ function objctags() {
     --regex-objc='/^[[:space:]]*\@interface[[:space:]]+(.*)[[:space:]]+:.*{/\1/i,interface/' -R .&> /dev/null
 }
 
-
+function dsp () {
+   sudo cp -R $1 '/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/DeviceSupport'
+}
 
 export HOMEBREW_NO_AUTO_UPDATE=true
 # source ~/.bash_profile
@@ -43,10 +45,14 @@ alias m='mkdir'
 alias pi='pod install'
 alias subl="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
 alias zshconfig="subl ~/.macbootstrap/zsh-config/personalized.sh"
-alias rnb="react-native bundle --platform ios --entry-file index.js --bundle-output ios/bundle/main.jsbundle --assets-dest ios/bundle --dev false
-"
+alias rnb="react-native bundle --platform ios --entry-file index.js --bundle-output ios/bundle/main.jsbundle --assets-dest ios/bundle --dev false"
 alias codep="code-push"
-alias cdmj='cd ~/MyProject/majia/wmguan'
+alias cdmj='cd ~/MyProject/majia'
+alias pt='export http_proxy=http://127.0.0.1:1087 https_proxy=http://127.0.0.1:1087'
+alias dpt='unset http_proxy https_proxy'
+alias adgi='cp ~/MyProject/majia/jianzhi/.gitignore .gitignore'
+alias oapd="subl ~/MyProject/majia/shunck/appdata.sh"
+alias shapd="sh ~/MyProject/majia/shunck/appdata.sh"
 
 
 
