@@ -44,11 +44,12 @@ export PATH="$PATH:$HOME/.rvm/bin"
 alias m='mkdir'
 alias pi='pod install'
 alias subl="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
+alias mcd="'/Applications/MacDown.app/Contents/SharedSupport/bin/macdown'"
 alias zshconfig="subl ~/.macbootstrap/zsh-config/personalized.sh"
 alias rnb="react-native bundle --platform ios --entry-file index.js --bundle-output ios/bundle/main.jsbundle --assets-dest ios/bundle --dev false"
 alias codep="code-push"
 alias cdmj='cd ~/MyProject/majia'
-alias pt='export http_proxy=http://127.0.0.1:1087 https_proxy=http://127.0.0.1:1087'
+alias pt='export http_proxy=http://127.0.0.1:7890 https_proxy=http://127.0.0.1:7890'
 alias dpt='unset http_proxy https_proxy'
 alias adgi='cp ~/MyProject/majia/jianzhi/.gitignore .gitignore'
 alias oapd="subl ~/MyProject/majia/shunck/appdata.sh"
