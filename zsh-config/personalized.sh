@@ -9,7 +9,7 @@ function yd () {
     if [[ ! -e /usr/local/bin/youtube-dl  ]]; then
         brew install youtube-dl
     fi
-    youtube-dl -q --proxy socks5://127.0.0.1:1086/ --console-title $1 -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4 -o '~/Movies/Youtube/%(title)s.%(ext)s' &
+    youtube-dl -q --proxy socks5://127.0.0.1:7891/ --console-title $1 -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4 -o '~/Movies/Youtube/%(title)s.%(ext)s' &
 }
 
 # Make ctags in current directory
@@ -49,11 +49,11 @@ alias zshconfig="subl ~/.macbootstrap/zsh-config/personalized.sh"
 alias rnb="react-native bundle --platform ios --entry-file index.js --bundle-output ios/bundle/main.jsbundle --assets-dest ios/bundle --dev false"
 alias codep="code-push"
 alias cdmj='cd ~/MyProject/majia'
-alias pt='export http_proxy=http://127.0.0.1:7890 https_proxy=http://127.0.0.1:7890'
-alias dpt='unset http_proxy https_proxy'
+alias pt='export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7891'
+alias dpt='unset http_proxy https_proxy all_proxy'
 alias adgi='cp ~/MyProject/majia/jianzhi/.gitignore .gitignore'
 alias oapd="subl ~/MyProject/majia/shunck/appdata.sh"
 alias shapd="sh ~/MyProject/majia/shunck/appdata.sh"
-
+alias fix='sudo xattr -rd com.apple.quarantine '
 
 
