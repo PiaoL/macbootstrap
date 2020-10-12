@@ -7,11 +7,11 @@ export BSTEMP='/private/tmp'
 function current_networkservice() {
     network=''
     if [ "$(networksetup -getnetworkserviceenabled Ethernet)" = 'Enabled' ]; then
-       network='Ethernet'
+        network='Ethernet'
     elif [ "$(networksetup -getnetworkserviceenabled Wi-Fi)" = 'Enabled' ]; then
-       network='Wi-Fi'
+        network='Wi-Fi'
     else
-       network=''
+        network=''
     fi
     echo $network
 }
